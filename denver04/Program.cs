@@ -7,4 +7,4 @@ int a = new Random().Next(100, 1000);
 Console.WriteLine(a);
 int b = int.Parse(a.ToString().Remove(0, 1));
 int c = int.Parse(b.ToString().Remove(1, 1));
-Console.WriteLine(c);
+Console.WriteLine("Вторая цифра этого числа " + c);
