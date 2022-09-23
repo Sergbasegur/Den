@@ -7,12 +7,12 @@ int x = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine("y: ");
 int y = Convert.ToInt32(Console.ReadLine());
 
-int Q = quarter (x, y);
-string res = Q > 0 ? $"указанные значения соответсвуют четверти -> {Q.ToString()}" 
+int quarter = Quarter (x, y);
+string res = quarter > 0 ? $"указанные значения соответсвуют четверти -> {quarter.ToString()}" 
 : "Введены некорректные координаты";
 Console.WriteLine(res);
 
-int quarter (int xc, int yc)
+int Quarter (int xc, int yc)
 {
 if(x > 0 && y > 0)  return 1;
 if(x < 0 && y > 0)  return 2;
