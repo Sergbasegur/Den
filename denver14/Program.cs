@@ -3,15 +3,13 @@
 // и выдает сумму чисел от 1 до (А).
 Console.WriteLine("Введите число :");
 int number = Convert.ToInt32(Console.ReadLine());
-int sumNum = SumNumb(number);
-Console.WriteLine(sumNum);
 
-int SumNumb(int num)
+int sum = 0;
+
+while(number > 0)
+
 {
-    int sum = default;
-    for(int i = 1; i <= num; i++)
-    {
-            sum = sum + i;
-    }
-    return sum;
-} 
+    sum = sum + number % 10;
+    number = number / 10;
+}
+Console.WriteLine(sum);
