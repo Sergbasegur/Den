@@ -9,14 +9,19 @@
 
 
 Console.WriteLine("Введите несколько чисел --> через пробел");
+
 int[] array = Array.ConvertAll(Console.ReadLine().Split(),int.Parse);
-int count = 0;
-for (int i = 0; i < array.Length; i++)
+void Sum(int[] arr)
 {
-    if(array[i] >= 0)
+int count = 0;
+for (int i = 0; i < arr.Length; i++)
     {
-        count++;
-   
+        if(arr[i] >= 0)
+        {
+         count++;
+        }   
     }
+    Console.WriteLine($"количество введенных элементов = {count}");
 }
-Console.WriteLine($"количество введенных элементов = {count}");
+Sum(array);
+
