@@ -16,8 +16,14 @@ double k1 = Convert.ToUInt32(Console.ReadLine());
 Console.WriteLine("Введите координату - k2");
 double k2 = Convert.ToUInt32(Console.ReadLine());
 
-double result = (b2 - b1) / (k1 - k2);
+double x = (b2 - b1) / (k1 - k2);
 
-Console.WriteLine($"точка пересечения двух заданных прямых = {result}");
+double y1 = k1 * x + b1;
+double y2 = k2 * x + b2;
+
+
+
+
+Console.WriteLine($"точка пересечения двух заданных прямых y1 и y2 = ({y1}; {y2})");
 
 // x = (b2 - b1) / (k1 - k2)
