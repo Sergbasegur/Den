@@ -7,39 +7,33 @@
 // 5 9 2 3
 // 8 4 2 4
 // Среднее арифметическое каждого столбца: 4,6; 5,6; 3,6; 3.
-int n = 3;
-int m = 4;
+int n = 3,  m = 4;
+int[,] array = new int[m, n];
 
-int [,] array = new int [n, m];
+ColumnArray(array);
 
-
-void PrintArray(int[,] arr)
+for (int i = 0; i < n; i++)
 {
-    for (int i = 0; i < n; i++)
-    {
-        for (int j = 0; j < m; j++)
-        {
-            arr[i,j] = new Random().Next(0, 9);
-            Console.Write($"{arr[i,j]} ");
-        }
-        Console.WriteLine();
-    }
+  double averageMean = 0;
+  for (int j = 0; j < m; j++)
+  {
+     averageMean+= array[j, i];
+  }
+  averageMean = Math.Round(averageMean / m, 1);
+  Console.WriteLine($"средне арифметическое столбца  {i+1} --> {averageMean}\n ");
 }
 
-void ArithmeticMean(int[,] arr)
-{ 
-    for (int i = 0; i < arr.GetLength(0); i++)
-    {
-        for (int j = 0; j < arr.GetLength(1); j++)
-        {
-            
-        }
-    }
-       
+void ColumnArray (int[,] arr){
+for (int i = 0; i < m; i++)
+  {
+      for (int j = 0; j < n; j++)
+      {
+        arr[i, j] = new Random().Next(1,10);
+        arr[i, j] = Convert.ToInt32(array[i, j]);
+        Console.Write(arr[i, j] + " ");
+      }
+      Console.WriteLine();
+  }
 }
- 
 
-PrintArray(array);
-Console.WriteLine();
-ArithmeticMean(array);
 
