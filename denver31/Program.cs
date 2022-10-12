@@ -42,3 +42,4 @@ void ArithmeticMean(int[,] arr)
 PrintArray(array);
 Console.WriteLine();
 ArithmeticMean(array);
+
