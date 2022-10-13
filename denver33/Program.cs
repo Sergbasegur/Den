@@ -13,6 +13,7 @@
 //  и выдаёт номер строки с наименьшей суммой элементов: 1 строка
 
 int[,] array = new int[3,4];
+
 CreateArray(array);
 WriteArray(array);
 
@@ -31,23 +32,23 @@ for (int i = 1; i < array.GetLength(0); i++)
 Console.WriteLine($"\n{minSumLine+1} - строкa с наименьшей суммой ({sumLine}) элементов ");
 
 
-int SumLineElements(int[,] array, int i)
+int SumLineElements(int[,] arr, int i)
 {
-  int sumLine = array[i,0];
-  for (int j = 1; j < array.GetLength(1); j++)
+  int sumLine = arr[i,0];
+  for (int j = 1; j < arr.GetLength(1); j++)
   {
-    sumLine += array[i,j];
+    sumLine += arr[i,j];
   }
   return sumLine;
 }
 
-void CreateArray(int[,] array)
+void CreateArray(int[,] arr)
 {
-  for (int i = 0; i < array.GetLength(0); i++)
+  for (int i = 0; i < arr.GetLength(0); i++)
   {
-    for (int j = 0; j < array.GetLength(1); j++)
+    for (int j = 0; j < arr.GetLength(1); j++)
     {
-      array[i, j] = new Random().Next(1,9);
+      arr[i, j] = new Random().Next(1,9);
     }
   }
 }
