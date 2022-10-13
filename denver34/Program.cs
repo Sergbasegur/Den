@@ -41,24 +41,24 @@ void MultiplyMatrix(int[,] martrix1, int[,] martrix, int[,] resultMatrix)
   }
 }
 
-void CreateArray(int[,] array)
+void CreateArray(int[,] arr)
 {
-  for (int i = 0; i < array.GetLength(0); i++)
+  for (int i = 0; i < arr.GetLength(0); i++)
   {
-    for (int j = 0; j < array.GetLength(1); j++)
+    for (int j = 0; j < arr.GetLength(1); j++)
     {
-      array[i, j] = new Random().Next(1,9);
+      arr[i, j] = new Random().Next(1,9);
     }
   }
 }
 
-void WriteArray (int[,] array)
+void WriteArray (int[,] arr)
 {
-  for (int i = 0; i < array.GetLength(0); i++)
+  for (int i = 0; i < arr.GetLength(0); i++)
   {
-    for (int j = 0; j < array.GetLength(1); j++)
+    for (int j = 0; j < arr.GetLength(1); j++)
     {
-      Console.Write(array[i,j] + " ");
+      Console.Write(arr[i,j] + " ");
     }
     Console.WriteLine();
   }
