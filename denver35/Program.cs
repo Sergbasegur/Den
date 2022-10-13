@@ -14,16 +14,16 @@ int[,,] array3D = new int[x, y, z];
 CreateArray(array3D);
 WriteArray(array3D);
 
-void WriteArray (int[,,] array3D)
+void WriteArray (int[,,] arr3D)
 {
-  for (int i = 0; i < array3D.GetLength(0); i++)
+  for (int i = 0; i < arr3D.GetLength(0); i++)
   {
-    for (int j = 0; j < array3D.GetLength(1); j++)
+    for (int j = 0; j < arr3D.GetLength(1); j++)
     {
       
-      for (int k = 0; k < array3D.GetLength(2); k++)
+      for (int k = 0; k < arr3D.GetLength(2); k++)
       {
-        Console.Write( $"{array3D [i, j, k]} = ({i},{j},{k}) ");
+        Console.Write( $"{arr3D [i, j, k]} = ({i},{j},{k}) ");
       }
       Console.WriteLine();
     }
@@ -31,9 +31,9 @@ void WriteArray (int[,,] array3D)
   }
 }
 
-void CreateArray(int[,,] array3D)
+void CreateArray(int[,,] arr3D)
 {
-  int[] temp = new int[array3D.GetLength(0) * array3D.GetLength(1) * array3D.GetLength(2)];
+  int[] temp = new int[arr3D.GetLength(0) * arr3D.GetLength(1) * arr3D.GetLength(2)];
   int  number;
   for (int i = 0; i < temp.GetLength(0); i++)
   {
@@ -54,13 +54,13 @@ void CreateArray(int[,,] array3D)
     }
   }
   int count = 0; 
-  for (int x = 0; x < array3D.GetLength(0); x++)
+  for (int x = 0; x < arr3D.GetLength(0); x++)
   {
-    for (int y = 0; y < array3D.GetLength(1); y++)
+    for (int y = 0; y < arr3D.GetLength(1); y++)
     {
-      for (int z = 0; z < array3D.GetLength(2); z++)
+      for (int z = 0; z < arr3D.GetLength(2); z++)
       {
-        array3D[x, y, z] = temp[count];
+        arr3D[x, y, z] = temp[count];
         count++;
       }
     }
